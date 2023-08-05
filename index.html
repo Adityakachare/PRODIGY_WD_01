@@ -4,17 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:wght@500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Borel&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Navbar</title>
 </head>
 
-<body>
+<body onload="setDefault()">
     <div class="container">
         <nav>
             <input type="checkbox" id="check">
@@ -23,14 +32,67 @@
             </label>
             <label class="logo"><span class="name">A</span>ditya</label>
             <ul>
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Feedback</a></li>
+                <li><a class="active" href="#" onclick="showPage('home', this)">Home</a></li>
+                <li><a href="#" onclick="showPage('about', this)">About</a></li>
+                <li><a href="#" onclick="showPage('services', this)">Services</a></li>
+                <li><a href="#" onclick="showPage('contact', this)">Contact</a></li>
             </ul>
         </nav>
     </div>
+
+    <div id="home" style="display: none;">
+        <!-- Home page content -->
+        <h1 class="center">Home</h1>
+        <p class="lo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit veritatis vero sit tenetur
+            amet doloribus
+            accusamus magni asperiores harum reprehenderit, ex quia cupiditate totam, eum esse praesentium officia vel!
+            Consectetur nisi unde assumenda </p>
+    </div>
+
+    <div id="about" style="display: none;">
+        <!-- Your About page content here -->
+        <h1 class="center">About Me</h1>
+        <p style="font-size: 30px;">Aspiring B.Tech student with a passion for Full Stack Development. Currently honing
+            my skills and knowledge in web development, database management, and server-side scripting. Enthusiastic
+            about creating innovative and user-friendly applications that blend aesthetics with functionality. Committed
+            to continuous learning and staying up-to-date with the latest technologies and trends in the field. Eager to
+            leverage my educational background and technical prowess to contribute to dynamic projects and make a
+            positive impact in the world of software development.</p>
+    </div>
+
+    <div id="services" style="display: none;">
+        <!-- Your Services page content here -->
+        <h1 style="color: #0033ff;" class="center">Our Services</h1>
+        <div class="tble">
+            <table>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Service 1</td>
+                    <td>Description of Service 1</td>
+                </tr>
+                <tr>
+                    <td>Service 2</td>
+                    <td>Description of Service 2</td>
+                </tr>
+                <tr>
+                    <td>Service 3</td>
+                    <td>Description of Service 3</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="contact" style="display: none;">
+        <!-- Your Contact page content here -->
+        <h1 class="center" style="margin-bottom: 40px;">Contact Us</h1>
+        <img src="images/contact.jpg" alt="" class="cimg">
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 <!-- https://adityakachare.github.io/PRODIGY_WD_01/ -->
+
 </html>
